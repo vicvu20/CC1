@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spooktacular Storybook — CSS-Only</title>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Eater&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="spooktacular.css" />
+</head>
+<body>
+  <!-- Invisible anchors used for :target page routing -->
+  <span id="page-1" class="anchor" aria-hidden="true"></span>
+  <span id="page-2" class="anchor" aria-hidden="true"></span>
+  <span id="page-3" class="anchor" aria-hidden="true"></span>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="#page-1" class="logo" aria-label="Spooktacular home">
+        <img src="assets/images/moon.svg" alt="" class="logo-mark" />
+        <span class="logo-type">Spooktacular</span>
+      </a>
+      <nav class="site-nav" role="navigation" aria-label="Primary">
+        <a href="#page-1">Prologue</a>
+        <a href="#page-2">The Big Night</a>
+        <a href="#page-3">Library</a>
+        <a href="#credits">Credits</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="pages" role="main">
+    <!-- PAGE 1: Soft intro leading to splash -->
+    <section class="page page--intro" aria-labelledby="p1-title">
+      <section class="hero" role="region" aria-label="Hero">
+        <h1 id="p1-title" class="hero-title">
+          <span class="hero-line">One moon. </span>
+          <span class="hero-line">Two travelers. </span>
+          <span class="hero-line">Three doors...</span>
+        </h1>
+        <p class="lede">A whisper rides the wind. The town holds its breath. Follow the path, if you dare.</p>
+        <div class="hero-decor">
+          <img src="assets/images/ghost.svg" alt="" class="float ghost ghost--hero" />
+          <img src="assets/images/bat.svg" alt="" class="bat bat--1" />
+          <img src="assets/images/bat.svg" alt="" class="bat bat--2" />
+        </div>
+        <a class="cta pager" href="#page-2">Turn the page</a>
+      </section>
+
+      <section class="cards">
+        <article class="card graveyard">
+          <h2 class="card-title">Graveyard Murmurs</h2>
+          <p>Hover to reveal the wandering spirit.</p>
+          <div class="card-art">
+            <img src="assets/images/ghost.svg" alt="" class="ghost" />
+          </div>
+        </article>
+
+        <article class="card library">
+          <h2 class="card-title">Haunted Library</h2>
+          <p>Focus me with keyboard — the books rattle in place.</p>
+          <div class="card-art">
+            <img src="assets/images/cobweb.svg" alt="" class="web" />
+          </div>
+        </article>
+
+        <article class="card patch">
+          <h2 class="card-title">Pumpkin Patch</h2>
+          <p>Find the lantern glow — it flickers when you linger.</p>
+          <div class="card-art">
+            <img src="assets/images/pumpkin.svg" alt="" class="pumpkin" />
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <!-- PAGE 2: Big splash, multi-panel story with sprites -->
+    <section class="page page--splash" aria-labelledby="p2-title">
+      <h2 id="p2-title" class="visually-hidden">The Big Night</h2>
+
+      <section class="splash-hero" role="region" aria-label="Moonlit Forest">
+        <div class="splash-layer stars"></div>
+        <div class="splash-layer fog"></div>
+        <div class="splash-inner container">
+          <h3 class="splash-title"><span>Midnight in the</span> <em>Moonlit Forest</em></h3>
+          <p class="splash-lede">Bats draw cursive in the sky. A ghost fades at the treeline. The path splits in three…</p>
+          <div class="sprite-row" role="list">
+            <div class="sprite" role="listitem">
+              <img src="assets/images/vampire.svg" alt="" class="vampire" />
+              <span class="caption">Vampire <small>(fangs on hover)</small></span>
+            </div>
+            <div class="sprite" role="listitem">
+              <img src="assets/images/werewolf.svg" alt="" class="werewolf" />
+              <span class="caption">Werewolf <small>(morphing)</small></span>
+            </div>
+            <div class="sprite" role="listitem">
+              <img src="assets/images/witch.svg" alt="" class="witch" />
+              <span class="caption">Witch <small>(broom fly-by)</small></span>
+            </div>
+          </div>
+          <a class="pager" href="#page-3">Next chapter</a>
+        </div>
+      </section>
+
+      <section class="panels container" aria-label="Three Doors">
+        <article class="panel theme--square">
+          <h3>Haunted Town Square</h3>
+          <p>Street lamps blink in nervous sequence while fog slips between the cobbles.</p>
+          <a class="pager" href="#page-1">Back to prologue</a>
+        </article>
+
+        <article class="panel theme--patch">
+          <h3>Pumpkin Patch Gallery</h3>
+          <p>Character cards reveal on hover. Choose wisely — some grin back.</p>
+          <button class="ghost-button" aria-label="Summon a ghost">Summon</button>
+        </article>
+
+        <article class="panel theme--forest">
+          <h3>Moonlit Forest Path</h3>
+          <p>Use the page links to “turn” the story. No scripts needed.</p>
+          <a class="pager" href="#credits">Skip to credits</a>
+        </article>
+      </section>
+    </section>
+
+    <!-- PAGE 3: Haunted Library Chapter with :checked interaction -->
+    <section class="page page--chapter" aria-labelledby="p3-title">
+      <h2 id="p3-title" class="visually-hidden">Chapter III — The Haunted Library</h2>
+
+      <section class="chapter-hero container">
+        <h3 class="chapter-title">Chapter III: The Whispering Stacks</h3>
+        <p class="chapter-lede">A draft flips pages no hand has touched. Something waits between the lines…</p>
+
+        <input type="checkbox" id="summon" class="visually-hidden" />
+        <label for="summon" class="toggle"><span>Open the Grimoire</span></label>
+
+        <div class="grimoire">
+          <img src="assets/images/cobweb.svg" alt="" class="webbing" />
+          <div class="spirit" aria-hidden="true"></div>
+          <p class="note">Press again to close.</p>
+        </div>
+
+        <nav class="pager-row">
+          <a class="pager" href="#page-2">Back</a>
+          <a class="pager" href="#credits">Credits</a>
+        </nav>
+      </section>
+    </section>
+  </main>
+
+  <footer id="credits" class="site-footer" role="contentinfo">
+    <div class="container">
+      <p><strong>Credits:</strong> Designed & coded with pure CSS magic. Imagery: inline SVG assets with transparent backgrounds.</p>
+      <p class="tagline">“If you can’t see the code… perhaps it’s just invisible.”</p>
+      <p class="small">Keyboard nav: Tab to focus links/cards. Motion settings respect <code>prefers-reduced-motion</code>.</p>
+    </div>
+  </footer>
+</body>
+</html>

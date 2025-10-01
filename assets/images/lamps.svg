@@ -1,0 +1,22 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 400'>
+  <rect width='800' height='400' fill='transparent'/>
+  <g stroke='#ffd' stroke-width='2'>
+    <line x1='100' y1='0' x2='100' y2='120'/>
+    <line x1='400' y1='0' x2='400' y2='120'/>
+    <line x1='700' y1='0' x2='700' y2='120'/>
+  </g>
+  <g fill='#ffd'>
+    <circle cx='100' cy='120' r='10'/>
+    <circle cx='400' cy='120' r='10'/>
+    <circle cx='700' cy='120' r='10'/>
+  </g>
+  <g>
+    <radialGradient id='glow' cx='50%' cy='50%' r='50%'>
+      <stop offset='0' stop-color='#ffd' stop-opacity='.6'/>
+      <stop offset='1' stop-color='#ffd' stop-opacity='0'/>
+    </radialGradient>
+    <circle cx='100' cy='160' r='80' fill='url(#glow)'/>
+    <circle cx='400' cy='160' r='80' fill='url(#glow)'/>
+    <circle cx='700' cy='160' r='80' fill='url(#glow)'/>
+  </g>
+</svg>
