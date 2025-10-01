@@ -275,3 +275,12 @@ img { max-width: 100%; display: block; }
 .chapter-hero #summon:checked ~ .grimoire{ box-shadow: 0 20px 50px rgba(75,0,130,.35); }
 /* Make the spirit visible even if gradients fail */
 .grimoire .spirit{ background: radial-gradient(circle at 40% 40%, #fff, rgba(255,255,255,0) 60%), rgba(255,255,255,0.06); }
+
+
+/* Personal credit styling */
+.credit {
+  font-weight: 600;
+  color: var(--pumpkin);
+  text-align: center;
+  margin-top: 1rem;
+}
